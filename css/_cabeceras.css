@@ -1,0 +1,12 @@
+header{
+    display: grid;
+    align-items: center;
+    background-color: var(--colorPrincipal);
+    width: 100%;
+}
+
+header h1{
+    text-align: center;
+    color: white;
+    font: 16pt Impact;
+}

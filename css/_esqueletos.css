@@ -1,0 +1,8 @@
+body{
+    font: var(--fuenteGeneral);
+    max-width: 1400px;
+    margin: 0px auto;
+    height: 100vh;
+    display: grid;
+    grid-template-rows:10% 85% 5%;
+}
