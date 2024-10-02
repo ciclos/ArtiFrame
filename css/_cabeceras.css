@@ -20,9 +20,10 @@ header.sinLogo h1{
 /*Definiciones para cabecera con logo*/
 
 /*
-Tenemos dos clases para el header.
-LogoIzquierda hace uso del display grid y
-LogoCentrado no usa display grid
+Tenemos tres clases para el header.
+---izquierda hace uso del display grid y
+---centrado no usa display grid y
+--derecha utiliza float
 */
 
 
@@ -54,9 +55,13 @@ header.conLogo.conLogo--centrado img{ /*TODO: FIX*/
 }
 
 header.conLogo.conLogo--izquierda{
-    display: grid;
+   display: grid;
    grid-template-columns: 10% 90%;
    align-items: center;
    grid-gap: 5vh;
 }
 
+header.conLogo.conLogo--derecha img{
+    float: right;
+    line-height: 10vh;
+}
