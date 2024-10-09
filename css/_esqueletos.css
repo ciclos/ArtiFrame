@@ -1,58 +1,180 @@
-body{
-    font: var(--fuenteGeneral);
-    max-width: 1400px;
-    margin: 0px auto;
-    height: 100vh;
-    display: grid;
+body {
+  font: var(--fuenteGeneral);
+  max-width: 1400px;
+  margin: 0px auto;
+  height: 100vh;
+  display: grid;
 }
 
-nav{
-    background: var(--colorTerciario);
+header {
+  grid-area: cabecera;
+}
+
+nav {
+  grid-area: navegacion;
+  background: var(--colorTerciario);
+}
+
+main {
+  grid-area: principal;
+}
+
+footer {
+  grid-area: pie;
+}
+
+aside{
+  grid-area: lateral;
+}
+
+nav ul li {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 0px 0.2em;
+  padding: 0.3em;
+  cursor: pointer;
+}
+
+/*SubMenus*/
+nav ul li {
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+nav ul li ul {
+  opacity: 0; 
+  transform: translateY(-10px); 
+  transition: opacity 0.3s ease, transform 0.1s ease; 
+  pointer-events: none; 
+  position: absolute; 
+  top: 100%;
+  left: 0;
+  background: var(--colorSecundario); 
+  width: 100%;
+  z-index: 1; 
+}
+
+nav ul li ul li {
+  list-style: none;
+  width: 100%;
+  padding: 10px 0px;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+/*defecto*/
+nav ul li ul li:hover {
+  background: #333;
+  color: white;
+}
+
+nav ul li:hover ul {
+  opacity: 1;
+  transform: translateY(0px); 
+  pointer-events: auto;
 }
 
 
-nav ul li{
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 0px 0.2em;
-    padding: 0.3em;
+/*NAV HORIZONTAL*/
+body.simple.simple--navHorizontal {
+  grid-template-areas:
+    "cabecera"
+    "navegacion"
+    "principal"
+    "pie";
+    grid-template-rows: auto auto 80% auto;
 }
 
-body.simple.simple--navHorizontal{
-    grid-template-rows:auto auto 80% auto;
+body.simple.simple--navHorizontal nav {
+  display: grid;
+  align-items: center;
+}
+
+body.simple.simple--navHorizontal nav > ul {
+  display: grid;
+  align-content: center;
+  grid-auto-flow: column;
+  list-style: none;
+  padding: 0.2em;
+}
+
+body.simple.simple--navHorizontal nav > ul li {
+  max-width: 15em;
+  min-width: 10em;
+}
+
+body.simple.simple--navHorizontal nav.navHorizontal--centrado > ul {
+  justify-content: center;
+}
+
+body.simple.simple--navHorizontal nav.navHorizontal--izquierda > ul {
+  justify-content: left;
+}
+
+body.simple.simple--navHorizontal nav.navHorizontal--derecha > ul {
+  justify-content: right;
+}
+
+body.simple.simple--navHorizontal nav ul li:hover ul{
+  display: block;
+  background: var(--colorSecundario);
+  width: 100%;
+  cursor: pointer;
+  top: 100%;
+  position: absolute;
+  z-index: 20;
 }
 
 
-body.simple.simple--navHorizontal nav{
-    display: grid;
-    align-items: center;
+/*NAV VERTICAL*/
+body.simple.simple--navVertical {
+    grid-template-areas:
+    "cabecera cabecera cabecera cabecera"
+    "navegacion principal principal principal"
+    "pie pie pie pie";
+    grid-template-rows: auto 80% auto;
+    grid-template-columns: 20% auto auto auto;
 }
 
-body.simple.simple--navHorizontal nav ul{
-    display: grid;
-    align-content: center;
-    grid-auto-flow: column;
-    list-style: none;
-    padding: 0.2em;
+body.simple.simple--navVertical.--navVertical--derecha {
+  grid-template-areas:
+  "cabecera cabecera cabecera cabecera"
+  "principal principal principal navegacion"
+  "pie pie pie pie";
+  grid-template-columns: auto auto auto 20%;
 }
 
-body.simple.simple--navHorizontal nav ul li{
-   max-width: 15em;
-   min-width: 10em;
-   white-space: nowrap;
-   overflow: hidden;
-   text-overflow: ellipsis;
+body.simple.simple--navVertical nav ul li:hover ul {
+  display: block;
+  opacity: 1;
+  transform: translateY(0px); 
+  position: relative;
 }
 
-body.simple.simple--navHorizontal nav.navHorizontal--centrado ul{
-    justify-content: center;
+
+/*NAV HORIZONTAL CON ASIDE*/
+body.simple.simple--navHorizontal.simple--aside{
+  grid-template-areas:
+    "cabecera cabecera cabecera"
+    "navegacion navegacion navegacion"
+    "lateral principal principal"
+    "pie pie pie";
+    grid-template-columns: 20% auto auto;
 }
 
-body.simple.simple--navHorizontal nav.navHorizontal--izquierda ul{
-    justify-content: left;
+body.simple.simple--navHorizontal.simple--aside--derecha{
+  grid-template-areas:
+    "cabecera cabecera cabecera"
+    "navegacion navegacion navegacion"
+    "principal principal lateral"
+    "pie pie pie";
+    grid-template-columns: auto auto 20%;
 }
-
-body.simple.simple--navHorizontal nav.navHorizontal--derecha ul{
-    justify-content: right;
-}
-

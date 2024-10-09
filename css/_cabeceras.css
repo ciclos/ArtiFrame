@@ -2,7 +2,6 @@ header{
     background-color: var(--colorPrincipal);
 }
 
-
 /*Definiones para cabecera sin logo*/
 
 header.sinLogo{
@@ -35,12 +34,13 @@ header.conLogo{
 header.conLogo img {
     height: 7vh;
     border-radius: 100%;
+    grid-area: logo;
 }
 
 header.conLogo h1 {
     font-size: 1.5em;
+    grid-area: titulo;
 }
-
 
 header.conLogo.conLogo--centrado{
     text-align: center;
@@ -56,12 +56,18 @@ header.conLogo.conLogo--centrado img{ /*TODO: FIX*/
 
 header.conLogo.conLogo--izquierda{
    display: grid;
+   grid-template-areas: 
+   "logo titulo"
+   ;
    grid-template-columns: 10% 90%;
    align-items: center;
    grid-gap: 5vh;
 }
 
-header.conLogo.conLogo--derecha img{
-    float: right;
-    line-height: 10vh;
+header.conLogo.conLogo--derecha{
+    display: grid;
+    grid-template-areas: "titulo logo";
+    grid-template-columns: 90% 10%;
+    align-items: center;
+    grid-gap: 5vh;
 }
