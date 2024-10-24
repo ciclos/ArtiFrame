@@ -20,9 +20,11 @@ button:hover span.tooltip{
 span.tooltip::after{
     content: " ";
     position: absolute;
+    top: 1.8em;
+    right: 50%;
     width: 0;
     height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 100px solid var(--colorPrincipal);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid var(--colorPrincipal);
 }
