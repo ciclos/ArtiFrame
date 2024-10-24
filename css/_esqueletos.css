@@ -2,7 +2,7 @@ body {
   font: var(--fuenteGeneral);
   max-width: 1400px;
   margin: 0px auto;
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
 }
 
@@ -17,7 +17,20 @@ nav {
 
 main {
   grid-area: principal;
+  display: grid;
+  grid-gap: 1em;
 }
+
+/*Main tipos*/
+body.simple.simple__main--columnas main {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+body.simple.simple__main--filas main  {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
 
 footer {
   grid-area: pie;
@@ -90,8 +103,9 @@ body.simple.simple--navHorizontal {
     "navegacion"
     "principal"
     "pie";
-    grid-template-rows: auto auto 80% auto;
+    grid-template-rows: 200px auto 80% auto;
 }
+
 
 body.simple.simple--navHorizontal nav {
   display: grid;
@@ -133,6 +147,25 @@ body.simple.simple--navHorizontal nav ul li:hover ul{
   z-index: 20;
 }
 
+/*NAV HORIZONTAL CON ASIDE*/
+body.simple.simple--navHorizontal.simple__aside{
+  grid-template-areas:
+    "cabecera cabecera cabecera"
+    "navegacion navegacion navegacion"
+    "lateral principal principal"
+    "pie pie pie";
+    grid-template-columns: 20% auto auto;
+}
+
+body.simple.simple--navHorizontal.simple__aside--derecha{
+  grid-template-areas:
+    "cabecera cabecera cabecera"
+    "navegacion navegacion navegacion"
+    "principal principal lateral"
+    "pie pie pie";
+    grid-template-columns: auto auto 20%;
+}
+
 
 /*NAV VERTICAL*/
 body.simple.simple--navVertical {
@@ -144,6 +177,7 @@ body.simple.simple--navVertical {
     grid-template-columns: 20% auto auto auto;
 }
 
+
 body.simple.simple--navVertical.--navVertical--derecha {
   grid-template-areas:
   "cabecera cabecera cabecera cabecera"
@@ -151,6 +185,7 @@ body.simple.simple--navVertical.--navVertical--derecha {
   "pie pie pie pie";
   grid-template-columns: auto auto auto 20%;
 }
+
 
 body.simple.simple--navVertical nav ul li:hover ul {
   display: block;
@@ -160,21 +195,7 @@ body.simple.simple--navVertical nav ul li:hover ul {
 }
 
 
-/*NAV HORIZONTAL CON ASIDE*/
-body.simple.simple--navHorizontal.simple--aside{
-  grid-template-areas:
-    "cabecera cabecera cabecera"
-    "navegacion navegacion navegacion"
-    "lateral principal principal"
-    "pie pie pie";
-    grid-template-columns: 20% auto auto;
-}
-
-body.simple.simple--navHorizontal.simple--aside--derecha{
-  grid-template-areas:
-    "cabecera cabecera cabecera"
-    "navegacion navegacion navegacion"
-    "principal principal lateral"
-    "pie pie pie";
-    grid-template-columns: auto auto 20%;
-}
+/*bugs*/
+body.simple.simple--navVertical.simple__aside aside{
+  display: none;
+} 
