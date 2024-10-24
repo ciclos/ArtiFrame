@@ -3,8 +3,9 @@ article p{
 }
 
 article header{
-    grid-area: cabecera;
- }
+    grid-area: cabeceraArticle;
+    
+}
 
 article img{
     grid-area: imagen;
@@ -15,21 +16,21 @@ article img{
 
 article{
     display: grid;
-    grid-template-areas: 'cabecera imagen'
+    grid-template-areas: 'cabeceraArticle imagen'
                          'cuerpo imagen';
-    grid-template-rows: 10% 90%;
+    grid-template-rows:2em auto;
     grid-template-columns: 70% 30%;
 }
 
 article.img__derecha{
     display: grid;
-    grid-template-areas: 'cabecera imagen'
+    grid-template-areas: 'cabeceraArticle imagen'
                          'cuerpo imagen';
 }
 
 article.img__izquierda{
     display: grid;
-    grid-template-areas: 'imagen cabecera'
+    grid-template-areas: 'imagen cabeceraArticle'
                          'imagen cuerpo';
 }
 
