@@ -6,4 +6,5 @@
 @import url('./_cabeceras.css');
 @import url('./_cuerpo.css');
 @import url('./_hover.css');
-@import url('./_tools.css')
+@import url('./_tooltips.css');
+@import url('./_articulos.css');
