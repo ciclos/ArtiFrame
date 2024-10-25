@@ -45,11 +45,11 @@ body.simple.simple--navVertical nav ul li:hover ul {
     margin-bottom: 0em;
 }
 
-body.simple.simple--navVertical nav.despligueBloque ul li:hover ul {
-    position: relative;
-    margin: 0.7em 0px;
-    margin-bottom: 0em;
+body.simple.simple--navVertical nav.despligueFlotado ul li:hover ul {
+    position: absolute;
+    margin:0px;
 }
+
 
 body.simple.simple--navVertical nav ul>li {
     padding: 1em 0em;
