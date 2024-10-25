@@ -1,5 +1,4 @@
-
-.hoverOscurecer{transition: background-color 400ms;}
+/* .hoverOscurecer{transition: background-color 400ms;}
 .hoverOscurecer:hover{
     background-color: var(--colorHoverOscurecido);
     color: white;
@@ -19,4 +18,4 @@
 .hoverBlanquedao:hover{
     background-color: var(--colorHoverBlanqueado);
     color:black;
-}
+} */
