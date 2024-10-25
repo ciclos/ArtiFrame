@@ -1,3 +1,7 @@
+/* Para construir cabeceras
+   Tipos de cabeceras: sinLogo, conLogo ( izquierda, centrado y derecha )
+*/
+
 body > header{
     background-color: var(--colorPrincipal);
 }
@@ -17,14 +21,6 @@ header.sinLogo h1{
 
 
 /*Definiciones para cabecera con logo*/
-
-/*
-Tenemos tres clases para el header.
----izquierda hace uso del display grid y
----centrado no usa display grid y
---derecha utiliza float
-*/
-
 
 header.conLogo{
     background-color: var(--colorPrincipal);
