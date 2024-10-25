@@ -39,7 +39,13 @@ nav ul li:hover ul {
 }
 
 /*Nav Vertical*/
-body.simple.simple--navVertical nav.despligueblock ul li:hover ul {
+body.simple.simple--navVertical nav ul li:hover ul {
+    position: relative;
+    margin: 0.7em 0px;
+    margin-bottom: 0em;
+}
+
+body.simple.simple--navVertical nav.despligueBloque ul li:hover ul {
     position: relative;
     margin: 0.7em 0px;
     margin-bottom: 0em;
