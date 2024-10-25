@@ -47,12 +47,15 @@ body.simple.simple--navVertical nav ul li:hover ul {
 
 body.simple.simple--navVertical nav.despligueFlotado ul li:hover ul { /*Por defecto esta en la izquierda el nav vertical asi que por defecto el menu se despliega hacia la derecha*/
     position: absolute;
+    top: 0%;
     left: 100%;
     margin:0px;
 }
 
 body.simple.simple--navVertical.--navVertical--derecha nav.despligueFlotado ul li:hover ul { /*Aqui la opcion de despliegue si esta el nav en la derecha pues el submenu se despliega ala derecha*/
-
+    position: absolute;
+    right:100%;
+    margin:0px;
 }
 
 body.simple.simple--navVertical nav ul>li {
