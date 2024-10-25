@@ -38,18 +38,22 @@ nav ul li:hover ul {
     background: red;
 }
 
-/*Nav Vertical*/
+/*Nav Vertical tiene el submenu dos tipos despliegue, el despligue defecto y el despliegue flotado que al lado que se despliega depende de la posicion del nav*/ 
 body.simple.simple--navVertical nav ul li:hover ul {
     position: relative;
     margin: 0.7em 0px;
     margin-bottom: 0em;
 }
 
-body.simple.simple--navVertical nav.despligueFlotado ul li:hover ul {
+body.simple.simple--navVertical nav.despligueFlotado ul li:hover ul { /*Por defecto esta en la izquierda el nav vertical asi que por defecto el menu se despliega hacia la derecha*/
     position: absolute;
+    left: 100%;
     margin:0px;
 }
 
+body.simple.simple--navVertical.--navVertical--derecha nav.despligueFlotado ul li:hover ul { /*Aqui la opcion de despliegue si esta el nav en la derecha pues el submenu se despliega ala derecha*/
+
+}
 
 body.simple.simple--navVertical nav ul>li {
     padding: 1em 0em;
