@@ -26,11 +26,11 @@ main section{
 }
 
 /*Main tipos*/
-body.simple.simple__main--columnas main {
+body.simple__main--columnas main {
   grid-template-columns: repeat(auto, 1fr);
 }
 
-body.simple.simple__main--filas main  {
+body.simple__main--filas main  {
   grid-template-columns: 1fr;
 }
 
@@ -43,7 +43,7 @@ aside{
 }
 
 /*GRIDS HORIZONTAL*/
-body.simple.simple--navHorizontal {
+body.simple--navHorizontal {
   grid-template-areas:
       "cabecera"
       "navegacion"
@@ -54,7 +54,7 @@ body.simple.simple--navHorizontal {
 
 
 /*GRIDS VERTICAL*/
-body.simple.simple--navVertical {
+body.simple--navVertical {
   grid-template-areas:
       "cabecera cabecera cabecera cabecera"
       "navegacion principal principal principal"
@@ -64,7 +64,7 @@ body.simple.simple--navVertical {
 }
 
 
-body.simple.simple--navVertical.--navVertical--derecha {
+body.simple--navVertical.--navVertical--derecha {
   grid-template-areas:
       "cabecera cabecera cabecera cabecera"
       "principal principal principal navegacion"
@@ -73,7 +73,7 @@ body.simple.simple--navVertical.--navVertical--derecha {
 }
 
 /*GRID NAV HORIZONTAL CON ASIDE*/
-body.simple.simple--navHorizontal.simple__aside {
+body.simple--navHorizontal.simple__aside {
   grid-template-areas:
       "cabecera cabecera cabecera"
       "navegacion navegacion navegacion"
@@ -82,7 +82,7 @@ body.simple.simple--navHorizontal.simple__aside {
   grid-template-columns: 20% auto auto;
 }
 
-body.simple.simple--navHorizontal.simple__aside--derecha {
+body.simple--navHorizontal.simple__aside--derecha {
   grid-template-areas:
       "cabecera cabecera cabecera"
       "navegacion navegacion navegacion"
@@ -92,6 +92,6 @@ body.simple.simple--navHorizontal.simple__aside--derecha {
 }
 
 /*bugs*/
-body.simple.simple--navVertical.simple__aside aside{
+body.simple--navVertical.simple__aside aside{
   display: none;
 }

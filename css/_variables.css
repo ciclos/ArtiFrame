@@ -4,15 +4,4 @@
     --colorSecundario:#D5ACA9;
     --colorTerciario:#EBCFB2;
     --colorGeneralLetra:black;
-    --colorHoverOscurecido:#333333;
-    --colorHoverBlanqueado:#ffffff;
-    --colorBotonesFondoDefecto:#333333;
-    --colorBotonesSombraDefecto:#333333;
-
-    --colorBordeMenu:white;
-    --colorFondoLiPrincipalesMenu:white;
-    --colorFondoLiSubmenuMenu:#4d4d4d;
-    --colorFondoMenu:#333;
-    --colorLetraMenu:white;
-    --colorFlechaSubMenuSuperior:var(--colorFondoLiSubmenuMenu);
 }
