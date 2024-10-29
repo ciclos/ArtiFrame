@@ -1,0 +1,52 @@
+/* Hacer que el cuerpo ocupe toda la pantalla y centrado */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura completa de la pantalla */
+    margin: 0;
+}
+
+.form-container {
+    width: 90%; 
+    max-width: 500px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 8px;
+    text-align: left;
+    color: #000;
+}
+
+h2 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+input, button {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+}
