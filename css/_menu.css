@@ -15,11 +15,11 @@ nav ul li ul li{
 }
 
 nav ul li ul li:hover{
-    background: var(--colorSecundario);
+    background: var(--colorCuaternario);
 }
 
 body nav ul li:hover{
-    background: var(--colorSecundario);
+    background: var(--colorCuaternario);
 }
 
 body nav ul li ul li{
