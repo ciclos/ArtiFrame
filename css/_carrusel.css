@@ -1,0 +1,27 @@
+.carrusel {
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+.carrusel div {
+    display: flex;
+    position: absolute;
+    animation: pasarela 10s linear infinite;
+    width: calc(400px * var(--numeroImagenes));
+}
+
+.carrusel div img {
+    width: 400px;
+    height: 400px;
+}
+
+@keyframes pasarela {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-400px * var(--numeroImagenes)));
+    }
+}
