@@ -18,20 +18,20 @@ body {
     color: #000;
 }
 
-h2 {
+.form-container h2 {
     text-align: center;
     font-size: 18px;
     margin-bottom: 15px;
     color: #000;
 }
 
-label {
+.form-container label {
     display: block;
     margin-bottom: 5px;
     color: #000;
 }
 
-input, button {
+.form-container input, button {
     width: 90%;
     padding: 8px;
     margin-bottom: 10px;
@@ -39,7 +39,7 @@ input, button {
     box-sizing: border-box;
 }
 
-button {
+.form-container button {
     background-color: #007bff;
     color: white;
     border: none;
