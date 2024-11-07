@@ -3,8 +3,6 @@ button{
     border: none;
     background: var(--colorBotonesFondoDefecto);
     color: white;
-    transition: transform 0.2s;
-    cursor: pointer;
 }
 
 .bottonRedondeado{
@@ -19,14 +17,6 @@ button{
     box-shadow:0px 0px 10px var(--colorBotonesSombraDefecto);
 }
 
-
-button:hover{
-transform: scale(1.06);
-}
-
-button:active{
-    transform: scale(1);
-}
 
 
 
