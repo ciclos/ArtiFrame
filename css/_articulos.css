@@ -1,23 +1,10 @@
-/*
-El componente permite crear un articulo con una foto y decidir en que posición va la foto.
-*/
-
-article{
-    display: grid;
-    grid-template-areas: 'cabeceraArticle imagen'
-                         'cuerpo imagen';
-    grid-template-rows:2em auto;
-    grid-template-columns: 70% 30%;
-}
-
 article p{
    grid-area: cuerpo;
 }
 
 article header{
-    grid-area: cabeceraArticle;
-    
-}
+    grid-area: cabecera;
+ }
 
 article img{
     grid-area: imagen;
@@ -26,16 +13,23 @@ article img{
     width: 100%;
 }
 
+article{
+    display: grid;
+    grid-template-areas: 'cabecera imagen'
+                         'cuerpo imagen';
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 70% 30%;
+}
 
 article.img__derecha{
     display: grid;
-    grid-template-areas: 'cabeceraArticle imagen'
+    grid-template-areas: 'cabecera imagen'
                          'cuerpo imagen';
 }
 
 article.img__izquierda{
     display: grid;
-    grid-template-areas: 'imagen cabeceraArticle'
+    grid-template-areas: 'imagen cabecera'
                          'imagen cuerpo';
 }
 

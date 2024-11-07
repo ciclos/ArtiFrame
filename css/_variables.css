@@ -5,4 +5,8 @@
     --colorTerciario:#EBCFB2;
     --colorCuaternario:#d1a7b1;
     --colorGeneralLetra:black;
+    --colorHoverOscurecido:#333333;
+    --colorHoverBlanqueado:#ffffff;
+    --colorBotonesFondoDefecto:#333333;
+    --colorBotonesSombraDefecto:#333333;
 }
