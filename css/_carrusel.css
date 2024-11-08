@@ -8,7 +8,7 @@
 .carrusel div {
     display: flex;
     position: absolute;
-    animation: pasarela 10s infinite;
+    animation: pasarela calc(var(--tiempo) * var(--numeroImagenes))  infinite;
     animation-timing-function: steps(var(--numeroImagenes));
     width: calc(400px * var(--numeroImagenes));
 }
@@ -16,7 +16,22 @@
 .carrusel div img {
     width: 400px;
     height: 400px;
-    animation: slide calc(10s / var(--numeroImagenes)) ease-in-out infinite forwards;
+    animation: lateral var(--tiempo) ease-in-out infinite forwards;
+    opacity: 0; 
+}
+
+.carrusel.lateral div img {
+    width: 400px;
+    height: 400px;
+    animation: lateral var(--tiempo) ease-in-out infinite forwards;
+    opacity: 0; 
+}
+
+
+.carrusel.arriba div img {
+    width: 400px;
+    height: 400px;
+    animation: arriba var(--tiempo) ease-in-out infinite forwards;
     opacity: 0; 
 }
 
@@ -29,7 +44,7 @@
     }
 }
 
-/* @keyframes slide {
+@keyframes lateral {
     0% {
         transform: translateX(100%)  scale(0.8);
         opacity: 0;
@@ -46,10 +61,10 @@
         transform: translateX(-100%)  scale(0.8);
         opacity: 0;
     }
-} */
+} 
 
 
-@keyframes slide {
+@keyframes arriba {
     0% {
         transform: translateY(-100%) scale(0.8); 
         opacity: 0;
@@ -66,4 +81,4 @@
         transform: translateX(-100%) scale(0.8); 
         opacity: 0;
     }
-} 
+}
