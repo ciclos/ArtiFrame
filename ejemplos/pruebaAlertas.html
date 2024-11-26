@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú de Hamburgesa con Acordeón y Botones</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 10px;
+    }
+
+    .menu ul {
+      display: flex;
+      list-style: none;
+    }
+
+    .menu ul li {
+      margin: 0 15px;
+    }
+
+    .menu ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .menu .hamburger {
+      display: none;
+      cursor: pointer;
+      font-size: 30px;
+      color: white;
+    }
+
+    .alert {
+      background-color: #f44336;
+      color: white;
+      padding: 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .alert h2 {
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .alert p {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .alert.open p {
+      display: block;
+    }
+
+    .alert .close-btn,
+    .alert .tick-btn,
+    .alert .x-btn {
+      cursor: pointer;
+      font-size: 20px;
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .alert .tick-btn {
+      right: 40px;
+    }
+
+
+    @media screen and (max-width: 768px) {
+      .menu ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        padding: 10px 0;
+      }
+
+      .menu ul li {
+        text-align: center;
+        margin: 10px 0;
+      }
+
+      .menu .hamburger {
+        display: block;
+      }
+
+      .alert h2 {
+        display: none;
+      }
+
+      .alert.open p {
+        display: block;
+      }
+
+      .alert.mobile {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+
+    .resolved {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="menu">
+    <div class="logo">Mi Sitio</div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <ul id="menu-items">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </div>
+
+  <div class="alert" onclick="toggleAlert(this)">
+    <h2>¡Alerta Importante!</h2>
+    <p>Este es un mensaje detallado que aparece al abrir la alerta.</p>
+    <span class="close-btn" onclick="closeAlert(event)">×</span>
+    <span class="tick-btn" onclick="resolveAlert(event)">✔</span>
+    <span class="x-btn" onclick="closeAlert(event)">❌</span>
+  </div>
+
+  <div class="alert" onclick="toggleAlert(this)">
+    <h2>¡Otra Alerta!</h2>
+    <p>Este es otro mensaje que aparece con el acordeón.</p>
+    <span class="close-btn" onclick="closeAlert(event)">×</span>
+    <span class="tick-btn" onclick="resolveAlert(event)">✔</span>
+    <span class="x-btn" onclick="closeAlert(event)">❌</span>
+  </div>
+
+  <script>
+
+    function toggleMenu() {
+      var menu = document.getElementById('menu-items');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+
+
+    function toggleAlert(alert) {
+      alert.classList.toggle('open');
+    }
+
+
+    function closeAlert(event) {
+      event.stopPropagation();
+      var alert = event.target.closest('.alert');
+      alert.style.display = 'none';
+    }
+
+
+    function resolveAlert(event) {
+      event.stopPropagation();
+      var alert = event.target.closest('.alert');
+      alert.classList.add('resolved');
+      alert.querySelector('.tick-btn').style.display = 'none';
+      alert.querySelector('.x-btn').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
